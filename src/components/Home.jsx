@@ -31,12 +31,19 @@ export default function Home() {
                 </div>
 
                 <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://i.ibb.co/5BCcDYB/Remote2.png" alt="image1" />
+                    <img className="w-96" src="/src/assets/website-maintenance.svg" alt="image1" />
+
+                    <a href="https://iconscout.com/illustrations/website-maintenance" class="text-underline font-size-sm" target="_blank">Website maintenance</a> by <a href="https://iconscout.com/contributors/delesign" class="text-underline font-size-sm">Delesign Graphics</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a>
+
+              
+                    
                 </div>
             </aside>
 
             <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
+                <img className="sm:w-96 w-48" src="/src/assets/group-of-happy-business-people.svg" alt="image2" />
+
+                <a href="https://iconscout.com/illustrations/group" class="text-underline font-size-sm" target="_blank">Group of happy business people</a> by <a href="https://iconscout.com/contributors/fedrunovan" class="text-underline font-size-sm" target="_blank">Nadya Fedrunova</a>
             </div>
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
