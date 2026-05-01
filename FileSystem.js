@@ -1,0 +1,18 @@
+import { resolve } from 'dns';
+import fs from 'fs';
+
+export default class FileSystem {
+    static read(path) {
+        return new Promise((resolve, reject) => {
+
+            fs.readFile(path, (err, data) => {
+                if (err) return reject(err);
+                resolve(data)
+            })
+        })
+    }
+
+    static write(path, data) {
+
+    }
+}
