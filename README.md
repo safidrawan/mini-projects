@@ -1,5 +1,6 @@
-#4 React Projects
-** Accordion **
-** Image slider **
-** Random Color **
-** Star rating **
+# 4 React Projects
+
+* **Accordion**
+* **Image Slider**
+* **Random Color**
+* **Star Rating**
