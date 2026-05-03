@@ -27,7 +27,7 @@ export default class Account {
     }
     async withdraw(amount) {
         if (this.#balance < amount ) {
-            await CommandLine.print('Insuficient balance.')
+            CommandLine.print('Insuficient balance.')
             return
         }
         await FileSystem.write(this.filePath, this.#balance - amount)

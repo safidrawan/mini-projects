@@ -19,9 +19,9 @@ async function main() {
 async function promptCreateAccount(accountName) {
     const response = await CommandLine.ask("Account not found. Do you want to create? (yes/no): ");
     if (response == 'yes') {
-        Account.create(accountName)
+        await Account.create(accountName)
     } else {
-        await CommandLine.print('Account not Created.')
+        CommandLine.print('Account not Created.')
     }
 }
 
@@ -29,17 +29,17 @@ async function promptAction(account) {
     const response = await CommandLine.ask('What do you want to do? (view/deposit/withdraw): ');
 
     if (response == 'view') {
-        await CommandLine.print(`Account: ${account.name} \n Balance: ${account.balance}`)
+        CommandLine.print(`Account: ${account.name} \n Balance: ${account.balance}`)
     }
     if (response == 'deposit') {
         const amount = parseFloat(await CommandLine.ask('How much?\n'))
         await account.deposit(amount);
-        await CommandLine.print(account.balance)
+        CommandLine.print(account.balance)
     }
     if (response == 'withdraw') {
         const amount = parseFloat(await CommandLine.ask('How much?\n'))
         await account.withdraw(amount)
-        await CommandLine.print(account.balance)
+        CommandLine.print(account.balance)
 
     }
 }
