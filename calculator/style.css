@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  color: #faebd7;
 }
 
 body {
@@ -27,7 +28,6 @@ body {
 
 .output {
   grid-column: 1/-1;
-  color: #fff;
   background-color: #444;
   padding: 10px;
   border-radius: 5px;
@@ -41,8 +41,8 @@ body {
   text-align: right;
   height: 30px;
 }
-.secondary-operand{
-    height: 25px;
+.secondary-operand {
+  height: 25px;
 }
 
 button {
@@ -50,15 +50,14 @@ button {
   background-color: #444;
   font-size: 1.5rem;
   border-radius: 5px;
-  color: #fff;
   border: none;
   cursor: pointer;
 }
-button:hover{
-    background-color: #555;
+button:hover {
+  background-color: #555;
 }
-button:active{
-    background-color: #666;
+button:active {
+  background-color: #666;
 }
 
 .span-two {
