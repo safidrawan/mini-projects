@@ -8,7 +8,7 @@ export default class CommandLine {
         })
 
         return new Promise(resolve => {
-            rl.question(question, answer =>{
+            rl.question(question, answer => {
                 resolve(answer)
                 rl.close();
             })
@@ -18,6 +18,5 @@ export default class CommandLine {
 
     static print(text) {
         console.log(text)
-
     }
 }

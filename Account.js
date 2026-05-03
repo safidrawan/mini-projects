@@ -1,4 +1,5 @@
-import FileSystem from "./FileSystem";
+import CommandLine from "./CommandLine.js";
+import FileSystem from "./FileSystem.js";
 export default class Account {
 
     constructor(name) {
@@ -20,19 +21,43 @@ export default class Account {
         return `./accounts/${this.#name}.txt`
     }
 
-
-   async #load() {
-        this.#balance = await FileSystem.read(this.getFilePath)
-       
+    async deposit(amount) {
+        await FileSystem.write(this.getFilePath(), this.#balance + amount)
+        this.#balance = this.#balance + amount
+    }
+    async withdraw(amount) {
+        if (this.#balance < amount ) {
+            await CommandLine.print('Insuficient balance.')
+            return
+        }
+        await FileSystem.write(this.getFilePath(), this.#balance - amount)
+        this.#balance = this.#balance - amount
+    }
+    async #load() {
+        this.#balance = parseFloat(await FileSystem.read(this.getFilePath()));
     }
 
-    async static find(accountName) {
-
+    static async find(accountName) {
         const account = new Account(accountName);
-        await account.#load();
+
+        try {
+            await account.#load();
+            return account;
+        } catch (e) {
+            return
+        }
 
     }
 
+    static async create(accountName) {
+        const account = new Account(accountName);
+        try {
+            const res = FileSystem.write(account.getFilePath(), 0);
+            CommandLine.print(res)
 
+        } catch (error) {
+            CommandLine.print(error.message)
+        }
+    }
 
 }
