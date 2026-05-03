@@ -1,0 +1,84 @@
+main {
+  width: 400px;
+  height: 400px;
+  background-color: #eee;
+  color: #0e1f2c;
+  margin: 20px auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.dice-container{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 20px;
+}
+.dice {
+  color: #0e1f2c;
+  background-color: white;
+  box-shadow: 0 2px 5px #ccc;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+}
+button{
+  cursor: pointer;
+}
+
+.btn{
+  background-color: #462FFC;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  font-weight: 700;
+  width: 100px;
+}
+.color-green{
+  color: #397e28;
+}
+.freeze{
+  background-color: #66DC85;
+  color: white;
+}
+p{
+  padding: 10px;
+  text-align: center;
+}
+.buttons{
+  display: flex;
+  gap: 20px;
+}
+
+h1,h2,p{
+  margin: 0px;
+}
+
+.btn-disabled{
+  opacity: 0.5;
+}
+
+.result{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+background-color: #ccc;
+color: #397e28;
+padding: 10px;
+border-radius: 10px;
+text-align: center;
+min-width: max-content;
+}
