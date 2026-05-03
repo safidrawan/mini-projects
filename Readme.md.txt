@@ -1,0 +1,1 @@
+# Mono Repo for many mini Projects for students
