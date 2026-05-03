@@ -32,22 +32,35 @@ export default class Calculator {
             this.secondaryDisplay.data.value = this.primaryDisplay.data.value;
         }
     }
-
     addDigit(digit) {
         if (this.primaryDisplay.data.value === '0' || this.reset) {
             this.primaryDisplay.textContent = '';
             this.primaryDisplay.data.value = '';
             this.reset = false;
         }
-        if (this.primaryDisplay.textContent.includes('.') && digit === '.') return;
+
+        if (digit === '.' && String(this.primaryDisplay.data.value).includes('.')) return;
+
         this.primaryDisplay.data.value += digit;
 
-        this.primaryDisplay.textContent = this.formatter.format(this.primaryDisplay.data.value);
+        const rawValue = String(this.primaryDisplay.data.value);
+        const floatValue = parseFloat(rawValue);
+
+        if (isNaN(floatValue)) {
+            this.primaryDisplay.textContent = rawValue;
+        } else if (rawValue.includes('.') && rawValue.endsWith('0')) {
+            this.primaryDisplay.textContent = this.formatter.format(floatValue) +
+                "." + rawValue.split('.')[1];
+        } else if (rawValue.endsWith('.')) {
+            this.primaryDisplay.textContent = this.formatter.format(floatValue) + ".";
+        } else {
+            this.primaryDisplay.textContent = this.formatter.format(floatValue);
+        }
 
         if (this.operationDisplay.textContent === '') {
             this.secondaryDisplay.textContent = this.primaryDisplay.textContent;
+            this.secondaryDisplay.data.value = this.primaryDisplay.data.value;
         }
-
     }
 
     operation(oeperator) {
@@ -86,6 +99,7 @@ export default class Calculator {
                 result = a * b;
                 break;
             case '/':
+            case '÷':
                 result = a / b;
                 break;
         }
