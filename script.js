@@ -29,17 +29,17 @@ async function promptAction(account) {
     const response = await CommandLine.ask('What do you want to do? (view/deposit/withdraw): ');
 
     if (response == 'view') {
-        await CommandLine.print(`Account: ${account.getName()} \n Balance: ${account.getBalance()}`)
+        await CommandLine.print(`Account: ${account.name} \n Balance: ${account.balance}`)
     }
     if (response == 'deposit') {
         const amount = parseFloat(await CommandLine.ask('How much?\n'))
         await account.deposit(amount);
-        await CommandLine.print(account.getBalance())
+        await CommandLine.print(account.balance)
     }
     if (response == 'withdraw') {
         const amount = parseFloat(await CommandLine.ask('How much?\n'))
         await account.withdraw(amount)
-        await CommandLine.print(account.getBalance())
+        await CommandLine.print(account.balance)
 
     }
 }

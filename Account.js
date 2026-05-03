@@ -9,20 +9,20 @@ export default class Account {
     #name;
     #balance;
 
-    getName() {
+    get name() {
         return this.#name;
     }
 
-    getBalance() {
+    get balance() {
         return this.#balance;
     }
 
-    getFilePath() {
+    get filePath() {
         return `./accounts/${this.#name}.txt`
     }
 
     async deposit(amount) {
-        await FileSystem.write(this.getFilePath(), this.#balance + amount)
+        await FileSystem.write(this.filePath, this.#balance + amount)
         this.#balance = this.#balance + amount
     }
     async withdraw(amount) {
@@ -30,11 +30,11 @@ export default class Account {
             await CommandLine.print('Insuficient balance.')
             return
         }
-        await FileSystem.write(this.getFilePath(), this.#balance - amount)
+        await FileSystem.write(this.filePath, this.#balance - amount)
         this.#balance = this.#balance - amount
     }
     async #load() {
-        this.#balance = parseFloat(await FileSystem.read(this.getFilePath()));
+        this.#balance = parseFloat(await FileSystem.read(this.filePath));
     }
 
     static async find(accountName) {
@@ -52,7 +52,7 @@ export default class Account {
     static async create(accountName) {
         const account = new Account(accountName);
         try {
-            const res = FileSystem.write(account.getFilePath(), 0);
+            const res = await FileSystem.write(account.filePath, 0);
             CommandLine.print(res)
 
         } catch (error) {
