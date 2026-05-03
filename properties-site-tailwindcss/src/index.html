@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Properties</title>
+  </head>
+
+  <body>
+    <nav class="shadow-lg">
+      <!-- Nav bar container -->
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Left and right section container -->
+        <div class="flex justify-between">
+          <div class="flex">
+            <a href="#" class="flex items-center py-4 px-2">
+              <img
+                src="/images/logo.png"
+                alt="Logo image"
+                class="h-8 w-8 mr-2"
+              />
+              <span class="font-semibold text-lg text-gray-500"
+                >Prime Properties</span
+              >
+            </a>
+          </div>
+          <div class="flex space-x-4">
+            <a
+              class="px-2 py-4 text-gray-500 font-semibold hover:text-blue-500 transition duration-300 border-b-4 border-blue-500"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="px-2 py-4 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              href="#"
+              >Services</a
+            >
+            <a
+              class="px-2 py-4 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              href="#"
+              >About</a
+            >
+            <a
+              class="px-2 py-4 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              href="#"
+              >Contact</a
+            >
+            <a
+              class="px-2 py-4 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              href="#"
+              >☀️ Toggle Theme</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mt-20 max-w-7xl mx-auto px-8">
+      <!-- Hero Section -->
+
+      <div class="hero">
+        <h1 class="tracking-tighter text-6xl font-extrabold">
+          <span>Prime Properties</span>
+          <span class="text-blue-500">Homes Made Easy</span>
+        </h1>
+        <p class="text-gray-500 mt-5 text-xl max-w-xl">
+          Your dream home is just a click away. Browse premium listings, expert
+          advice, and stress-free buying with Prime Properties.
+        </p>
+        <div class="flex text-xl mt-5 gap-4">
+          <a
+            href="#"
+            class="py-4 px-8 bg-blue-500 rounded-lg text-white whitespace-nowrap"
+            >View Properties</a
+          >
+          <a href="#" class="py-4 px-8 rounded-lg border whitespace-nowrap"
+            >Explore Locations</a
+          >
+        </div>
+      </div>
+
+      <!-- Recent Properties Section -->
+      <section class="mt-5 p-10">
+        <h2 class="text-3xl text-gray-700 mb-4 text-center">
+          Recent Properties
+        </h2>
+
+        <!-- Card container -->
+        <div
+          class="grid sm:grid-cols-1 gap-5 md:grid-cols-3 "
+        >
+          <!-- Card 1 -->
+          <div class="card overflow-hidden shadow-lg">
+            <!-- image container -->
+            <div class="relative">
+              <img
+                class="w-full"
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+                alt="Modern house with garden"
+              />
+              <span
+                class="absolute top-2 right-2 bg-red-500 px-2 py-1 rounded-full font-bold text-white text-xs"
+                >FORE SALE</span
+              >
+              <span
+                class="absolute left-2 bottom-2 bg-white/90 px-2 py-1 rounded-full"
+                >$450,000</span
+              >
+            </div>
+            <!-- Text-container -->
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-bold">Modern Suburban Home</h3>
+
+              <p>123 Greenview St, Springfield</p>
+              <div class="details">
+                <span class="bg-gray-300 rounded-full py-1 px-2"
+                  ><i class="fas fa-bed mr-1"></i> 3 Beds</span
+                >
+                <span class="bg-gray-300 rounded-full py-1 px-2"
+                  ><i class="fas fa-bath mr-1"></i> 2 Baths</span
+                >
+              </div>
+              <div class="mt-3">
+                <a class="text-blue-500 font-semibold" href="#">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card overflow-hidden shadow-lg ">
+            <!-- image container -->
+            <div class="relative">
+              <img
+                class="w-full "
+                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
+                alt="Modern house with garden"
+              />
+              <span
+                class="absolute top-2 right-2 bg-red-500 px-2 py-1 rounded-full font-bold text-white text-xs"
+                >FORE SALE</span
+              >
+              <span
+                class="absolute left-2 bottom-2 bg-white/90 px-2 py-1 rounded-full"
+                >$625000</span
+              >
+            </div>
+            <!-- Text-container -->
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-bold">Downtown Luxury Loft</h3>
+
+              <p>456 Skyline Blvd, Metropolis</p>
+              <div class="details">
+                <span class="bg-gray-300 rounded-full py-1 px-2"
+                  ><i class="fas fa-bed mr-1"></i> 2 Beds</span
+                >
+                <span class="bg-gray-300 rounded-full py-1 px-2"
+                  ><i class="fas fa-bath mr-1"></i> 2 Baths</span
+                >
+              </div>
+              <div class="mt-3">
+                <a class="text-blue-500 font-semibold" href="#">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card overflow-hidden shadow-lg ">
+            <!-- image container -->
+            <div class="relative">
+              <img
+                class="w-full "
+                src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b"
+                alt="Modern house with garden"
+              />
+              <span
+                class="absolute top-2 right-2 bg-red-500 px-2 py-1 rounded-full font-bold text-white text-xs"
+                >FORE SALE</span
+              >
+              <span
+                class="absolute left-2 bottom-2 bg-white/90 px-2 py-1 rounded-full"
+                >$320,000</span
+              >
+            </div>
+            <!-- Text-container -->
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-bold">Cozy Lakeside Cottage</h3>
+
+              <p>789 Pine Trail, Lakeview</p>
+              <div class="details">
+                <span class="bg-gray-300 rounded-full py-1 px-2"
+                  ><i class="fas fa-bed mr-1"></i> 2 Beds</span
+                >
+                <span class="bg-gray-300 rounded-full py-1 px-2"
+                  ><i class="fas fa-bath mr-1"></i> 1 Baths</span
+                >
+              </div>
+              <div class="mt-3">
+                <a class="text-blue-500 font-semibold" href="#">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+  </body>
+</html>
