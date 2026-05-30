@@ -1,6 +1,6 @@
-import { createInterface } from 'readline';
+const createInterface = require('readline').createInterface
 
-export default class CommandLine {
+module.exports = class CommandLine {
     static ask(question) {
         const rl = createInterface({
             input: process.stdin,

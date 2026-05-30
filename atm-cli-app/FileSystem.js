@@ -1,7 +1,5 @@
-import { resolve } from 'dns';
-import fs from 'fs';
-
-export default class FileSystem {
+const fs = require('fs');
+class FileSystem {
     static read(path) {
         return new Promise((resolve, reject) => {
 
@@ -21,3 +19,5 @@ export default class FileSystem {
         })
     }
 }
+
+module.exports = FileSystem

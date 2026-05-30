@@ -1,6 +1,6 @@
-import CommandLine from "./CommandLine.js";
-import FileSystem from "./FileSystem.js";
-export default class Account {
+const CommandLine = require("./CommandLine");
+const FileSystem = require("./FileSystem");
+class Account {
 
     constructor(name) {
         this.#name = name;
@@ -60,3 +60,5 @@ export default class Account {
     }
 
 }
+
+module.exports = Account
